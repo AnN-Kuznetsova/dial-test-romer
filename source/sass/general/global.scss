@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  //min-width: $mobile-width;
+  width: $mobile-width;
+  //width: $tablet-width;
+  //width: $desktop-width;
+
+  @include font-options();
+  font-weight: normal;
+
+  background-color: $bg-base-color;
+}
+
+/*  Ссылки  */
+a {
+  text-decoration: none;
+}
+
+/*  Картинки  */
+img {
+  max-width: 100%;
+  height: auto;
+}
