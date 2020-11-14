@@ -1,9 +1,17 @@
 .sub-nav {
+  @include decorative-line-border();
+
   background-color: $bg-base-color;
+
+  @include desktop-width() {
+    &::after {
+      content: none;
+    }
+  }
 }
 
 .sub-nav__container {
-  @include container($mobile-width, $mobile-padding, 33px, 28px);
+  @include container($mobile-width, 0, 15px, 15px);
 
   @include desktop-width() {
     @include container($desktop-width, $desktop-padding, 33px, 28px);
@@ -15,9 +23,26 @@
 }
 
 .sub-nav__nav-wrapper {
+  padding: 15px $mobile-padding;
+
   &--contacts {
     @include mobile-width-only() {
       display: none;
+    }
+  }
+
+  &--user-nav {
+    @include decorative-line-border();
+
+    padding-bottom: 15px;
+
+    @include desktop-width() {
+      order: 1;
+      margin-left: 25px;
+
+      &::after {
+        content: none;
+      }
     }
   }
 
@@ -27,9 +52,7 @@
     }
   }
 
-  &--user-nav {
-    @include desktop-width() {
-      margin-left: 25px;
-    }
+  @include desktop-width() {
+    padding: 0;
   }
 }

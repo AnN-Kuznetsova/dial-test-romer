@@ -1,17 +1,23 @@
 .ship-to {
+  padding: $mobile-padding $mobile-padding 15px;
+
   @include desktop-width() {
     display: flex;
     align-items: center;
 
     max-width: 400px;
-    padding-right: 50px;
+    padding: 0 50px 0 0;
   }
 }
 
 .ship-to__intro {
   @include font-options($font-regular, 12px, 12px, $text-base-color);
 
-  margin: -8px 0 0;
+  margin: 0;
+
+  @include desktop-width() {
+    margin: -8px 0 0;
+  }
 }
 
 .ship-to__link {

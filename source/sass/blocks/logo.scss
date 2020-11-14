@@ -8,6 +8,8 @@
 
 .logo__image {
   display: block;
+  width: 88px;
+  height: 17px;
 
   @include tablet-width() {
     width: 175px;

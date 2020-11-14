@@ -60,15 +60,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 12px;
 
-    @include font-options($font-bold, 11px, 16px, $text-second-color);
+    @include font-options($font-bold, 8px, 9px, $text-second-color);
 
     background-color: $bg-green-color;
     border-radius: 50%;
 
-    transform: translateX(5px) translateY(-15px);
+    transform: translateX(3px) translateY(-100%);
+
+    @include desktop-width() {
+      width: 18px;
+      height: 18px;
+
+      @include font-options($font-bold, 11px, 16px, $text-second-color);
+
+      transform: translateX(5px) translateY(-15px);
+    }
   }
 }
 
@@ -80,5 +89,23 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@mixin decorative-line-border($box-width: 100%, $box-height: 100%, $border-width: 1px, $border-color: $text-grey-color, $border-side: "bottom") {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+
+    width: $box-width;
+    height: $box-height;
+
+    border-#{$border-side}: $border-width solid $border-color;
+    pointer-events: none;
+    transform: translateX(-50%);
   }
 }

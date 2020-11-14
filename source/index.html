@@ -15,7 +15,7 @@
       <include src="build/img/sprite.svg"></include>
     </div>
 
-    <header class="page-header">
+    <header class="page-header  page-header--nojs">
       <!-- Logo -->
       <div class="page-header__logo-wrapper">
         <a class="logo">
@@ -24,7 +24,7 @@
         </a>
       </div>
 
-      <button class="page-header__nav-toggle" type="button">
+      <button class="page-header__nav-toggle  page-header__nav-toggle--opened" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
 
@@ -35,6 +35,43 @@
             <p class="contacts-info__intro  contacts-info__intro--header">Круглосуточно</p>
             <a class="contacts-info__tel-link  contacts-info__tel-link--header" href="#" aria-label="Наш телефон:">8 (800) 707-23-20</a>
             <a class="contacts-info__email-link" href="#">Написать нам</a>
+          </div>
+
+          <div class="sub-nav__nav-wrapper  sub-nav__nav-wrapper--user-nav  user-nav">
+            <ul class="user-nav__list">
+              <li class="user-nav__item  user-nav__item--user">
+                <a class="user-nav__link" href="#">
+                  <svg class="user-nav__image  user-nav__image--user" width="14" height="14" focusable="false">
+                    <use xlink:href="#icon-user"></use>
+                  </svg>
+                  <span class="visually-hidden">Личный кабинет</span>
+                </a>
+              </li>
+              <li class="user-nav__item  user-nav__item--compare">
+                <a class="user-nav__link" href="#">
+                  <svg class="user-nav__image  user-nav__image--compare" width="14" height="13" focusable="false">
+                    <use xlink:href="#icon-compare"></use>
+                  </svg>
+                  <span class="visually-hidden">Сравнить</span>
+                </a>
+              </li>
+              <li class="user-nav__item  user-nav__item--favorite">
+                <a class="user-nav__link" href="#">
+                  <svg class="user-nav__image  user-nav__image--favorite" width="14" height="14" focusable="false">
+                    <use xlink:href="#icon-heart"></use>
+                  </svg>
+                  <span class="visually-hidden">Избранное</span>
+                </a>
+              </li>
+              <li class="user-nav__item  user-nav__item--shopping-bag">
+                <a class="user-nav__link" href="#">
+                  <svg class="user-nav__image  user-nav__image--shopping-bag" width="14" height="14" focusable="false">
+                    <use xlink:href="#icon-shopping-bag"></use>
+                  </svg>
+                  <span class="visually-hidden">Корзина</span>
+                </a>
+              </li>
+            </ul>
           </div>
 
           <div class="sub-nav__nav-wrapper  sub-nav__nav-wrapper--ship-to  ship-to">
@@ -60,48 +97,11 @@
               </button>
             </form>
           </div>
-
-          <div class="sub-nav__nav-wrapper  sub-nav__nav-wrapper--user-nav  user-nav">
-            <ul class="user-nav__list">
-              <li class="user-nav__item  user-nav__item--user">
-                <a class="user-nav__link" href="#">
-                  <svg class="user-nav__image  user-nav__image--user" width="20" height="20" focusable="false">
-                    <use xlink:href="#icon-user"></use>
-                  </svg>
-                  <span class="visually-hidden">Личный кабинет</span>
-                </a>
-              </li>
-              <li class="user-nav__item  user-nav__item--compare">
-                <a class="user-nav__link" href="#">
-                  <svg class="user-nav__image  user-nav__image--compare" width="19" height="18" focusable="false">
-                    <use xlink:href="#icon-compare"></use>
-                  </svg>
-                  <span class="visually-hidden">Сравнить</span>
-                </a>
-              </li>
-              <li class="user-nav__item  user-nav__item--favorite">
-                <a class="user-nav__link" href="#">
-                  <svg class="user-nav__image  user-nav__image--favorite" width="21" height="21" focusable="false">
-                    <use xlink:href="#icon-heart"></use>
-                  </svg>
-                  <span class="visually-hidden">Избранное</span>
-                </a>
-              </li>
-              <li class="user-nav__item  user-nav__item--shopping-bag">
-                <a class="user-nav__link" href="#">
-                  <svg class="user-nav__image  user-nav__image--shopping-bag" width="20" height="20" focusable="false">
-                    <use xlink:href="#icon-shopping-bag"></use>
-                  </svg>
-                  <span class="visually-hidden">Корзина</span>
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
       </nav>
 
       <!-- Main-menu -->
-      <nav class="page-header__main-nav  main-nav  main-nav--opened  main-nav--nojs">
+      <nav class="page-header__main-nav  main-nav  main-nav--opened">
         <div class="main-nav__container">
           <ul class="main-nav__list">
             <li class="main-nav__item">

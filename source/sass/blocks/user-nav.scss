@@ -4,6 +4,13 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: flex-end;
+
+  padding: 0 $mobile-padding 0 93px;
+
+  @include desktop-width() {
+    padding: 0;
+  }
 }
 
 .user-nav__item {
@@ -15,7 +22,11 @@
     @include contains-quantity("3");
 
     &::after {
-      transform: translateX(1px) translateY(-15px);
+      transform: translateX(1px) translateY(-100%);
+
+      @include desktop-width() {
+        transform: translateX(1px) translateY(-15px);
+      }
     }
   }
 }
@@ -24,9 +35,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 52px;
-  height: 52px;
-  padding: 10px;
+  min-width: 30px;
+  height: 30px;
+  padding: 5px;
+
+  @include desktop-width() {
+    min-width: 52px;
+    height: 52px;
+    padding: 10px;
+  }
 
   &:hover .user-nav__image,
   &:focus .user-nav__image {
@@ -43,22 +60,42 @@
   pointer-events: none;
 
   &--user {
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
+
+    @include desktop-width() {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &--compare {
-    width: 19px;
-    height: 18px;
+    width: 14px;
+    height: 13px;
+
+    @include desktop-width() {
+      width: 19px;
+      height: 18px;
+    }
   }
 
   &--favorite {
-    width: 21px;
-    height: 21px;
+    width: 14px;
+    height: 14px;
+
+    @include desktop-width() {
+      width: 21px;
+      height: 21px;
+    }
   }
 
   &--shopping-bag {
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
+
+    @include desktop-width() {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
