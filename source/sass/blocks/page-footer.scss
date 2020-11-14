@@ -1,11 +1,19 @@
+.page-footer__wrapper {
+  &--top {
+    background-color: $bg-light-green-color;
+  }
+
+  &--bottom {
+    background-color: $bg-green-color;
+  }
+}
+
 .page-footer__container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 
   &--top {
-    background-color: $bg-light-green-color;
-
     @include desktop-width() {
       @include container($desktop-width, $desktop-padding, 77px, 76px);
     }
@@ -13,8 +21,6 @@
 
   &--bottom {
     justify-content: space-between;
-
-    background-color: $bg-green-color;
 
     @include desktop-width() {
       @include container($desktop-width, $desktop-padding, 17px, 12px);

@@ -1,12 +1,16 @@
 .main-nav {
-  @include container($mobile-width, $mobile-padding, 29px, 28px);
-
   background-color: $bg-base-color;
 
   @include desktop-width() {
-    @include container($desktop-width, 284px, 29px, 28px);
-
     background-color: $bg-light-green-color;
+  }
+}
+
+.main-nav__container {
+  @include container($mobile-width, $mobile-padding, 29px, 28px);
+
+  @include desktop-width() {
+    @include container($desktop-width, 284px, 29px, 28px);
   }
 }
 

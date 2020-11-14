@@ -1,7 +1,9 @@
 .sub-nav {
-  @include container($mobile-width, $mobile-padding, 33px, 28px);
-
   background-color: $bg-base-color;
+}
+
+.sub-nav__container {
+  @include container($mobile-width, $mobile-padding, 33px, 28px);
 
   @include desktop-width() {
     @include container($desktop-width, $desktop-padding, 33px, 28px);
