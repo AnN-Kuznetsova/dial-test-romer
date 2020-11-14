@@ -1,0 +1,74 @@
+.contacts-info {
+  padding-top: 9px;
+
+  &--header {
+    @include desktop-width() {
+      width: 263px;
+      padding: 0 50px 0 0;
+    }
+  }
+}
+
+.contacts-info__intro {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  @include font-options($font-regular, 12px, 18px, $text-grey-color);
+  text-transform: lowercase;
+
+  &--header {
+    @include font-options($font-regular, 12px, 12px, $text-grey-color);
+    margin: -3px 0 9px;
+  }
+}
+
+.contacts-info__tel-link {
+  @include font-options($font-bold, 16px, 28px, $text-base-color);
+  @include add-interactive-text-link();
+
+  display: block;
+
+  &--header {
+    @include font-options($font-bold, 16px, 16px, $text-base-color);
+    margin: 0 0 5px;
+  }
+}
+
+.contacts-info__email {
+  @include font-options($font-semi-bold, 12px, 28px, $text-base-color);
+  @include add-interactive-text-link();
+
+  display: block;
+  margin-bottom: 22px;
+}
+
+.contacts-info__email-link {
+  @include font-options($font-regular, 12px, 18px, $text-base-color);
+  @include add-interactive-text-link();
+
+  position: relative;
+  display: block;
+  padding: 0 0 0 21px;
+
+  text-decoration: underline;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 14px;
+    height: 14px;
+
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+
+    transform: translateY(-50%);
+  }
+
+  &--header {
+    @include font-options($font-regular, 12px, 12px, $text-base-color);
+  }
+}

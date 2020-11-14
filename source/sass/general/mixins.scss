@@ -71,3 +71,14 @@
     transform: translateX(5px) translateY(-15px);
   }
 }
+
+@mixin add-interactive-text-link($element: "") {
+  &:hover #{$element},
+  &:focus #{$element} {
+    color: $text-green-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

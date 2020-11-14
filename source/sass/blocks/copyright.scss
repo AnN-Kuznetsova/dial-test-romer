@@ -1,0 +1,6 @@
+.copyright {
+  @include font-options($font-regular, 13px, 34px, $text-second-color);
+
+  display: block;
+  margin: 0;
+}

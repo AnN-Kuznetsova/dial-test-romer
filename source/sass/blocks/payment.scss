@@ -1,0 +1,23 @@
+.payment {
+  padding-top: 5px;
+}
+
+.payment__intro {
+  @include font-options($font-semi-bold, 12px, 18px, $text-base-color);
+
+  display: block;
+  margin-bottom: 15px;
+}
+
+.payment__img {
+  display: block;
+  width: 239px;
+  height: 48px;
+  margin: 0 0 15px -19px;
+}
+
+.payment__text {
+  @include font-options($font-regular, 12px, 18px, $text-base-color);
+
+  margin: 0;
+}

@@ -1,0 +1,21 @@
+.developer {
+  @include font-options($font-regular, 13px, 34px, $text-second-color);
+
+  display: block;
+  margin: 0;
+}
+
+.developer__link {
+  @include font-options($font-regular, 13px, 34px, $text-second-color);
+
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    font-weight: 700;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,35 @@
+.footer-nav {
+  @include list-style-none();
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.footer-nav__item {
+  width: 20%;
+  padding-right: 50px;
+}
+
+.footer-nav__title-link {
+  @include font-options($font-bold, 14px, 24px, $text-base-color);
+  @include add-interactive-text-link();
+
+  display: block;
+  padding-bottom: 15px;
+
+  text-transform: uppercase;
+}
+
+.footer-nav__sub-nav {
+  @include list-style-none();
+}
+
+.footer-nav__sub-nav-link {
+  @include font-options($font-regular, 13px, 34px, $text-base-color);
+  @include add-interactive-text-link();
+}
+
+.footer-nav__contacts {
+  margin-bottom: 35px;
+}

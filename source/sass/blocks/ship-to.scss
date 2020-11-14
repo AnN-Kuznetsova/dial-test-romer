@@ -11,18 +11,11 @@
 .ship-to__intro {
   @include font-options($font-regular, 12px, 12px, $text-base-color);
 
-  margin: -6px 0 0;
+  margin: -8px 0 0;
 }
 
 .ship-to__link {
-  &:hover .ship-to__link-text,
-  &:focus .ship-to__link-text {
-    color: $text-green-color;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
+  @include add-interactive-text-link(".ship-to__link-text");
 
   &:hover .ship-to__image,
   &:focus .ship-to__image {

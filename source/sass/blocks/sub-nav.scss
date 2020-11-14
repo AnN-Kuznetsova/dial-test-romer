@@ -1,10 +1,10 @@
 .sub-nav {
-  @include container($mobile-width, $mobile-padding, 33px, 31px);
+  @include container($mobile-width, $mobile-padding, 33px, 28px);
 
   background-color: $bg-base-color;
 
   @include desktop-width() {
-    @include container($desktop-width, $desktop-padding, 33px, 31px);
+    @include container($desktop-width, $desktop-padding, 33px, 28px);
 
     display: flex;
     flex-direction: row;
