@@ -44,3 +44,11 @@
   fill: $link-base-color;
   pointer-events: none;
 }
+
+.ship-to--closed {
+  @include mobile-width-only() {
+    display: none;
+
+    min-height: 0;
+  }
+}

@@ -1,13 +1,5 @@
 .sub-nav {
-  @include decorative-line-border();
-
   background-color: $bg-base-color;
-
-  @include desktop-width() {
-    &::after {
-      content: none;
-    }
-  }
 }
 
 .sub-nav__container {
@@ -39,10 +31,6 @@
     @include desktop-width() {
       order: 1;
       margin-left: 25px;
-
-      &::after {
-        content: none;
-      }
     }
   }
 
@@ -52,7 +40,19 @@
     }
   }
 
+  &--nav-search {
+    @include decorative-line-border();
+
+    &::after {
+      top: 15px;
+    }
+  }
+
   @include desktop-width() {
     padding: 0;
+
+    &::after {
+      content: none;
+    }
   }
 }

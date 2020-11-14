@@ -51,3 +51,10 @@
   pointer-events: none;
 }
 
+.nav-search--closed {
+  @include mobile-width-only() {
+    display: none;
+
+    min-height: 0;
+  }
+}

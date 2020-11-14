@@ -24,7 +24,7 @@
         </a>
       </div>
 
-      <button class="page-header__nav-toggle  page-header__nav-toggle--opened" type="button">
+      <button class="page-header__nav-toggle  nav-toggle  nav-toggle--closed" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
 
@@ -74,7 +74,7 @@
             </ul>
           </div>
 
-          <div class="sub-nav__nav-wrapper  sub-nav__nav-wrapper--ship-to  ship-to">
+          <div class="sub-nav__nav-wrapper  sub-nav__nav-wrapper--ship-to  ship-to  ship-to--opened">
             <p class="ship-to__intro">Ваш регион доставки:
               <a class="ship-to__link" href="#">
                 <span class="ship-to__link-text">Тула</span>
@@ -85,7 +85,7 @@
             </p>
           </div>
 
-          <div class="sub-nav__nav-wrapper  sub-nav__nav-wrapper--nav-search  nav-search">
+          <div class="sub-nav__nav-wrapper  sub-nav__nav-wrapper--nav-search  nav-search  nav-search--opened">
             <form class="nav-search__form" action="#" method="POST">
               <label class="visually-hidden" for="nav-search">Поиск по сайту:</label>
               <input class="nav-search__input" id="nav-search" type="text" name="nav-search" value="" placeholder="Поиск">
@@ -305,5 +305,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/script.min.js"></script>
   </body>
 </html>

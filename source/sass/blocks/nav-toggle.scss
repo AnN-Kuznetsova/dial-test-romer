@@ -1,0 +1,78 @@
+.nav-toggle {
+  position: absolute;
+  top: 47px;
+  right: $mobile-padding;
+  z-index: 2;
+
+  display: block;
+  width: $mobile-padding;
+  height: $mobile-padding;
+
+  background-color: transparent;
+
+  cursor: pointer;
+  border: none;
+
+  &--closed::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+
+    width: 15px;
+    height: 1px;
+
+    background-color: $link-base-color;
+    box-shadow:
+      0 6px 0 0 $link-base-color,
+      0 12px 0 0 $link-base-color;
+
+    transform: translateX(-50%) translateY(-7px);
+  }
+
+  &--opened {
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+
+      width: 15px;
+      height: 1px;
+
+      background-color: $link-base-color;
+    }
+
+    &::before {
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    }
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    background-color: $link-hover-color;
+  }
+
+  &--closed:hover::before,
+  &--closed:focus::before {
+    box-shadow:
+      0 6px 0 0 $link-hover-color,
+      0 12px 0 0 $link-hover-color;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+  }
+
+  @include tablet-width() {
+    display: none;
+  }
+}
