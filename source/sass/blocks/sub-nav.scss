@@ -5,17 +5,26 @@
 .sub-nav__container {
   @include container($mobile-width, 0, 15px, 15px);
 
-  @include desktop-width() {
-    @include container($desktop-width, $desktop-padding, 33px, 28px);
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding, 33px, 28px);
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  @include desktop-width() {
+    @include container($desktop-width, $desktop-padding, 33px, 28px);
+  }
 }
 
 .sub-nav__nav-wrapper {
   padding: 15px $mobile-padding;
+
+  @include tablet-width() {
+    width: 50%;
+    padding: 0;
+  }
 
   &--contacts {
     @include mobile-width-only() {
@@ -24,13 +33,13 @@
   }
 
   &--user-nav {
-    @include decorative-line-border();
-
-    padding-bottom: 15px;
+    @include mobile-width-only() {
+      @include decorative-line-border();
+    }
 
     @include desktop-width() {
       order: 1;
-      margin-left: 25px;
+      width: auto;
     }
   }
 
@@ -41,18 +50,12 @@
   }
 
   &--nav-search {
-    @include decorative-line-border();
+    @include mobile-width-only() {
+      @include decorative-line-border();
 
-    &::after {
-      top: 15px;
-    }
-  }
-
-  @include desktop-width() {
-    padding: 0;
-
-    &::after {
-      content: none;
+      &::after {
+        top: 15px;
+      }
     }
   }
 }

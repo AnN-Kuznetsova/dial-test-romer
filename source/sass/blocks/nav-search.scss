@@ -6,6 +6,14 @@
 
 .nav-search__form {
   display: flex;
+
+  @include tablet-width() {
+    padding-left: 30%;
+  }
+
+  @include desktop-width() {
+    padding: 0;
+  }
 }
 
 .nav-search__input {

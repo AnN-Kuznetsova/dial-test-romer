@@ -12,6 +12,12 @@
   height: 17px;
 
   @include tablet-width() {
+    width: 131px;
+    height: 26px;
+    margin: 0 auto;
+  }
+
+  @include desktop-width() {
     width: 175px;
     height: 34px;
     margin: 0 0 0 11px;
