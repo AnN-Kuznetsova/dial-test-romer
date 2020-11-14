@@ -1,14 +1,14 @@
 .sub-nav {
-  @include container($mobile-width, $mobile-padding, 33px, 30px);
+  @include container($mobile-width, $mobile-padding, 33px, 31px);
+
+  background-color: $bg-base-color;
 
   @include desktop-width() {
-    @include container($desktop-width, $desktop-padding, 33px, 30px);
+    @include container($desktop-width, $desktop-padding, 33px, 31px);
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-    background-color: $bg-base-color;
   }
 }
 
