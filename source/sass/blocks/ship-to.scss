@@ -1,0 +1,47 @@
+.ship-to {
+  @include desktop-width() {
+    display: flex;
+    align-items: center;
+
+    max-width: 400px;
+    padding-right: 50px;
+  }
+}
+
+.ship-to__intro {
+  @include font-options($font-regular, 12px, 12px, $text-base-color);
+
+  margin: -6px 0 0;
+}
+
+.ship-to__link {
+  &:hover .ship-to__link-text,
+  &:focus .ship-to__link-text {
+    color: $text-green-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover .ship-to__image,
+  &:focus .ship-to__image {
+    fill: $link-hover-color;
+  }
+}
+
+.ship-to__link-text {
+  @include font-options($font-regular, 12px, 12px, $text-base-color);
+
+  padding: 0 5px;
+
+  text-decoration: underline;
+}
+
+.ship-to__image {
+  width: 7px;
+  height: 7px;
+
+  fill: $link-base-color;
+  pointer-events: none;
+}

@@ -1,0 +1,33 @@
+.sub-nav {
+  @include container($mobile-width, $mobile-padding, 33px, 30px);
+
+  @include desktop-width() {
+    @include container($desktop-width, $desktop-padding, 33px, 30px);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    background-color: $bg-base-color;
+  }
+}
+
+.sub-nav__nav-wrapper {
+  &--contacts {
+    @include mobile-width-only() {
+      display: none;
+    }
+  }
+
+  &--ship-to {
+    @include desktop-width() {
+      margin-right: auto;
+    }
+  }
+
+  &--user-nav {
+    @include desktop-width() {
+      margin-left: 25px;
+    }
+  }
+}

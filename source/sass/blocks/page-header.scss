@@ -1,0 +1,97 @@
+.page-header {
+  position: relative;
+
+  @include desktop-width() {
+    @include container($desktop-width, 0, 0, 0);
+
+    max-width: 100%;
+    margin: -58px 0 0;
+  }
+}
+
+.page-header__logo-wrapper {
+  @include desktop-width() {
+    position: relative;
+    top: 88px;
+    left: 50%;
+    width: fit-content;
+
+    transform: translateX(-50%);
+  }
+}
+
+
+//  Стилизация кнопки открытия меню
+
+.page-header__nav-toggle {
+  /* position: absolute;
+  top: -62px;
+  right: -8px;
+  z-index: 2;
+
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  background-color: transparent;
+
+  cursor: pointer;
+  border: none;
+  outline: none; */
+
+  @include tablet-width() {
+    display: none;
+  }
+}
+
+/* .main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+
+    width: 27px;
+    height: 2px;
+
+    background-color: $menu-button-color;
+  }
+
+  &::before {
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  }
+} */
+
+/* .main-nav--closed .main-nav__toggle::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: $menu-button-color;
+  box-shadow:
+    0 6px 0 0 $menu-button-color,
+    0 12px 0 0 $menu-button-color;
+
+  transform: translateX(-50%) translateY(-7px);
+} */
+
+/* .main-nav--closed .main-nav__list {
+  @include mobile-width-only() {
+    display: none;
+
+    min-height: 0;
+  }
+} */
+
+/* .main-nav--nojs .main-nav__toggle {
+  display: none;
+} */

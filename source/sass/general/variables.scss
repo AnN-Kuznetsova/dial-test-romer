@@ -1,8 +1,8 @@
 $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1920px;
-$mobile-padding: 50px;
-$tablet-padding: 100px;
+$mobile-padding: 30px;
+$tablet-padding: 50px;
 $desktop-padding: 180px;
 $mobile-width-only: 767px;
 
@@ -14,9 +14,16 @@ $font-bold: "Montserrat-bold", "Arial", sans-serif;
 /*  ЦВЕТА  */
 //  Текст
 $text-base-color: #000000;
+$text-second-color: #ffffff;
 $text-green-color: #009b77;
+$text-grey-color: #b4b4b4;
 
 //  Фон
 $bg-base-color: #ffffff;
 $bg-light-green-color: #f0f9f7;
 $bg-green-color: #009b77;
+$bg-grey-color: #f2f2f2;
+
+//  Ссылки
+$link-base-color: #000000;
+$link-hover-color: #009b77;

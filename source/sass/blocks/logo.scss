@@ -1,0 +1,30 @@
+.logo {
+  display: block;
+
+  @include tablet-width() {
+    width: 188px;
+    //margin: 0 auto;
+  }
+}
+
+.logo__image {
+  display: block;
+
+  @include tablet-width() {
+    width: 175px;
+    height: 34px;
+    margin: 0 auto;
+  }
+}
+
+.logo__intro {
+  display: none;
+
+  @include tablet-width() {
+    display: block;
+    margin: 0 auto;
+    padding-top: 12px;
+
+    @include font-options($font-regular, 12px, 12px, $text-base-color);
+  }
+}
