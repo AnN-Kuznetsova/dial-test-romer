@@ -15,8 +15,6 @@
     flex-wrap: wrap;
   }
 
-  outline:  1px solid blue;
-
   &--top {
     @include container($mobile-width, $mobile-padding, 40px, 40px);
 
@@ -24,9 +22,9 @@
       @include container($tablet-width, $tablet-padding, 50px, 50px);
     }
 
-    /* @include desktop-width() {
+    @include desktop-width() {
       @include container($desktop-width, $desktop-padding, 77px, 76px);
-    } */
+    }
   }
 
   &--bottom {
@@ -38,9 +36,9 @@
       justify-content: space-between;
     }
 
-    /* @include desktop-width() {
+    @include desktop-width() {
       @include container($desktop-width, $desktop-padding, 17px, 12px);
-    } */
+    }
   }
 }
 
@@ -51,6 +49,11 @@
     width: 100%;
     margin-bottom: 60px;
   }
+
+  @include desktop-width() {
+    width: 68%;
+    margin-bottom: 0;
+  }
 }
 
 .page-footer__contacts {
@@ -60,43 +63,28 @@
     width: 40%;
     margin: 0 auto 0 0;
   }
+
+  @include desktop-width() {
+    width: 17%;
+    margin-right: 0;
+  }
 }
 
 .page-footer__additionally {
-  outline: 1px solid red;
-
   @include tablet-width() {
     width: 40%;
   }
 
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; */
+  @include desktop-width() {
+    width: 15%;
+    margin-top: 4px;
+  }
 }
 
 .page-footer__payment {
   margin-bottom: 40px;
+
+  @include tablet-width() {
+    margin-bottom: 60px;
+  }
 }
-
-
-/******************************************/
-
-/* .page-footer__nav {
-  @include desktop-width() {
-    width: 85%;
-  }
-} */
-
-/* .page-footer__additionally {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  @include desktop-width() {
-    width: 15%;
-  }
-} */
-
-/* .page-footer__payment {
-  margin-bottom: 60px;
-} */
