@@ -5,9 +5,15 @@
 }
 
 .sub-nav__container {
-  @include container($mobile-width, 0, 0, 0); //15px, 15px);
+  @include container($mobile-width, 0, 0, 0);
 
-  outline: 1px solid blue;
+  @include tablet-width() {
+    @include container($tablet-width, 0, 0, 0); //$tablet-padding, 33px, 28px);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .sub-nav__nav-wrapper {
@@ -15,20 +21,27 @@
 
   padding: 30px $mobile-padding;
 
-  /* @include tablet-width() {
+  @include tablet-width() {
     width: 50%;
     padding: 0;
-  } */
+  }
 
   &--contacts {
-    @include mobile-width-only() {
-      display: none;
+    display: none;
+
+    @include tablet-width() {
+      @include decorative-line-border();
+
+      display: block;
+      padding: 33px 20% 25px $tablet-padding;
     }
   }
 
   &--user-nav {
-    @include mobile-width-only() {
-      @include decorative-line-border();
+    @include decorative-line-border();
+
+    @include tablet-width() {
+      padding: 33px $tablet-padding 25px 20%;
     }
 
     /* @include desktop-width() {
@@ -40,15 +53,24 @@
   &--ship-to {
     padding-bottom: 15px;
 
+    @include tablet-width() {
+      @include decorative-line-border();
+
+      padding: 0 0 0 $tablet-padding;
+    }
+
     /* @include desktop-width() {
       margin-right: auto;
     } */
   }
 
   &--nav-search {
+    @include decorative-line-border();
+
     padding-top: 15px;
-    @include mobile-width-only() {
-      @include decorative-line-border();
+
+    @include tablet-width() {
+      padding: 0 $tablet-padding 0 10%;
     }
   }
 }

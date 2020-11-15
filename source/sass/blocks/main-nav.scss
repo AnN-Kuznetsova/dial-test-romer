@@ -1,17 +1,27 @@
 .main-nav {
   background-color: $bg-base-color;
 
-  outline: 1px solid red;
+  @include tablet-width() {
+    background-color: $bg-light-green-color;
+  }
 }
 
 .main-nav__container {
   @include container($mobile-width, 0, 0, 0);
 
-  outline: 1px solid blue;
+  @include tablet-width() {
+    @include container($tablet-width, 13%, 0, 0);
+  }
 }
 
 .main-nav__list {
   @include list-style-none();
+
+  @include tablet-width() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .main-nav__item {
@@ -19,6 +29,12 @@
 
   @include mobile-width-only() {
     @include decorative-line-border();
+  }
+
+  @include tablet-width() {
+    width: 30%;
+    min-width: 284px;
+    padding: 0 100px 0 0;
   }
 }
 
@@ -42,6 +58,13 @@
   &[href]:active {
     opacity: 0.3;
   }
+
+  @include tablet-width() {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
 }
 
 .main-nav__link-text {
@@ -56,6 +79,10 @@
 
   &--active {
     color: $text-green-color;
+  }
+
+  @include tablet-width() {
+    padding: 20px 0;
   }
 }
 

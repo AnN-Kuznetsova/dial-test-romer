@@ -7,6 +7,10 @@
   justify-content: flex-end;
 
   padding: 0 30px 0 40%;
+
+  @include tablet-width() {
+    padding: 9px 0 0;
+  }
 }
 
 .user-nav__item {
@@ -32,14 +36,14 @@
   justify-content: center;
   align-items: center;
   min-width: 30px;
-  height: 30px;
+  min-height: 30px;
   padding: 5px;
 
- /*  @include tablet-width() {
+  @include tablet-width() {
     min-width: 40px;
-    height: 40px;
+    min-height: 40px;
     padding: 10px;
-  } */
+  }
 
   /* @include desktop-width() {
     min-width: 52px;
@@ -65,10 +69,10 @@
     width: 14px;
     height: 14px;
 
-    /* @include tablet-width() {
+    @include tablet-width() {
       width: 18px;
       height: 18px;
-    } */
+    }
 
     /* @include desktop-width() {
       width: 20px;
@@ -80,10 +84,10 @@
     width: 14px;
     height: 13px;
 
-    /* @include tablet-width() {
+    @include tablet-width() {
       width: 17px;
       height: 16px;
-    } */
+    }
 
     /* @include desktop-width() {
       width: 19px;
@@ -95,10 +99,10 @@
     width: 14px;
     height: 14px;
 
-    /* @include tablet-width() {
+    @include tablet-width() {
       width: 19px;
       height: 19px;
-    } */
+    }
 
     /* @include desktop-width() {
       width: 21px;
@@ -110,10 +114,10 @@
     width: 14px;
     height: 14px;
 
-    /* @include tablet-width() {
+    @include tablet-width() {
       width: 18px;
       height: 18px;
-    } */
+    }
 
     /* @include desktop-width() {
       width: 20px;

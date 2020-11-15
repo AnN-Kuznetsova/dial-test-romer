@@ -1,18 +1,27 @@
 .logo {
   display: block;
-
-  /* @include tablet-width() {
-    width: 188px;
-  } */
 }
 
 .logo__image {
   width: 88px;
   height: 17px;
+
+  @include tablet-width() {
+    width: 131px;
+    height: 26px;
+    margin: 0 auto;
+  }
 }
 
 .logo__intro {
   display: none;
+
+  @include tablet-width() {
+    @include block-style();
+    @include font-options($font-regular, 12px, 12px, $text-base-color);
+
+    padding-top: 12px;
+  }
 }
 
 

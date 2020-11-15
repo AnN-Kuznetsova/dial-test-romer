@@ -3,6 +3,11 @@
 
   position: relative;
   margin: -17px 0 0;
+
+  @include tablet-width() {
+    @include container($tablet-width, 0, 0, 0);
+    margin-top: -50px;
+  }
 }
 
 .page-header__logo-wrapper {
@@ -12,7 +17,13 @@
   z-index: 5;
   width: fit-content;
 
-  outline: 1px solid red;
+  @include tablet-width() {
+    top: 88px;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
 }
 
 
