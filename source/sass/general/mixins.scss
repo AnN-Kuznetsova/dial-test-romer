@@ -38,6 +38,7 @@
   @media (min-width: $mobile-width * 2) and (max-width: $tablet-width - 1px) {
     @content;
   }
+
   @media (min-width: $tablet-width * 2) and (max-width: $desktop-width - 1px) {
     @content;
   }

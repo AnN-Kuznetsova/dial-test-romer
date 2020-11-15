@@ -57,10 +57,10 @@
     cursor: default;
   }
 
-  &[href]:hover::before{
+  &[href]:hover::before {
     position: absolute;
     content: "";
-    top: 0px;
+    top: 0;
     left: 0;
 
     width: 100%;
