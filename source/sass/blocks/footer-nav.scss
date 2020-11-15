@@ -1,6 +1,11 @@
 .footer-nav {
   @include list-style-none();
   @include decorative-line-border();
+  @include decorative-line-border();
+
+  &::after {
+    top: 15px;
+  }
 
   outline: 1px solid red;
 }

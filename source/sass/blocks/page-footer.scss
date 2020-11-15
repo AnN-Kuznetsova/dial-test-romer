@@ -44,11 +44,23 @@
   } */
 }
 
+.page-footer__nav {
+  margin-bottom: 45px;
+}
+
+.page-footer__contacts {
+  margin-bottom: 60px;
+}
+
 .page-footer__additionally {
   outline: 1px solid red;
   /* display: flex;
   flex-direction: row;
   flex-wrap: wrap; */
+}
+
+.page-footer__payment {
+  margin-bottom: 40px;
 }
 
 

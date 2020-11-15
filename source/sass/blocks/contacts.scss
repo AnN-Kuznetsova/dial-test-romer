@@ -1,4 +1,10 @@
 .contacts {
+  @include decorative-line-border();
+
+  &::after {
+    top: 30px;
+  }
+
   outline: 1px solid red;
 }
 
