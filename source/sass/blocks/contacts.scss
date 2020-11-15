@@ -6,14 +6,39 @@
       top: 30px;
     }
   }
+
+  @include median-widths() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @include desktop-width() {
+    padding-right: 50px;
+  }
 }
 
 .contacts__title {
   @include footer-title();
 
   margin-bottom: 7px;
+
+  @include median-widths() {
+    width: 100%;
+  }
 }
 
 .contacts__info {
   margin-bottom: 35px;
+
+  @include median-widths() {
+    width: 40%;
+  }
+}
+
+.contacts__social {
+  @include median-widths() {
+    width: 40%;
+  }
 }
