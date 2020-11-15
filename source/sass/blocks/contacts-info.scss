@@ -1,5 +1,7 @@
 .contacts-info {
-  padding-top: 9px;
+  width: 50%;
+  min-width: 260px;
+  padding: 9px 80px 0 0;
 
   &--header {
     @include tablet-width() {

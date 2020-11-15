@@ -9,22 +9,36 @@
 }
 
 .page-footer__container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
   &--top {
+    @include container($mobile-width, $mobile-padding, 40px, 40px);
+
+    @include tablet-width() {
+      @include container($tablet-width, $tablet-padding, 77px, 76px);
+    }
+
     @include desktop-width() {
       @include container($desktop-width, $desktop-padding, 77px, 76px);
     }
   }
 
   &--bottom {
-    justify-content: space-between;
+    @include container($mobile-width, $mobile-padding, 17px, 12px);
+
+    @include tablet-width() {
+      @include container($tablet-width, $tablet-padding, 17px, 12px);
+
+      justify-content: space-between;
+    }
 
     @include desktop-width() {
       @include container($desktop-width, $desktop-padding, 17px, 12px);
     }
+  }
+
+  @include tablet-width() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -35,6 +49,10 @@
 }
 
 .page-footer__additionally {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
   @include desktop-width() {
     width: 15%;
   }
