@@ -105,3 +105,15 @@
     width: 40%;
   }
 }
+
+.page-footer__copyright {
+  @include tablet-width() {
+    max-width: 40%;
+  }
+}
+
+.page-footer__developer {
+  @include tablet-width() {
+    max-width: 40%;
+  }
+}
