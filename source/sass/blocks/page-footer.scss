@@ -9,16 +9,22 @@
 }
 
 .page-footer__container {
+  @include tablet-width() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   outline:  1px solid blue;
 
   &--top {
     @include container($mobile-width, $mobile-padding, 40px, 40px);
 
-    /* @include tablet-width() {
-      @include container($tablet-width, $tablet-padding, 77px, 76px);
+    @include tablet-width() {
+      @include container($tablet-width, $tablet-padding, 50px, 50px);
     }
 
-    @include desktop-width() {
+    /* @include desktop-width() {
       @include container($desktop-width, $desktop-padding, 77px, 76px);
     } */
   }
@@ -26,34 +32,43 @@
   &--bottom {
     @include container($mobile-width, $mobile-padding, 17px, 12px);
 
-    /* @include tablet-width() {
+    @include tablet-width() {
       @include container($tablet-width, $tablet-padding, 17px, 12px);
 
       justify-content: space-between;
     }
 
-    @include desktop-width() {
+    /* @include desktop-width() {
       @include container($desktop-width, $desktop-padding, 17px, 12px);
     } */
   }
-
-  /* @include tablet-width() {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  } */
 }
 
 .page-footer__nav {
   margin-bottom: 45px;
+
+  @include tablet-width() {
+    width: 100%;
+    margin-bottom: 60px;
+  }
 }
 
 .page-footer__contacts {
   margin-bottom: 60px;
+
+  @include tablet-width() {
+    width: 40%;
+    margin: 0 auto 0 0;
+  }
 }
 
 .page-footer__additionally {
   outline: 1px solid red;
+
+  @include tablet-width() {
+    width: 40%;
+  }
+
   /* display: flex;
   flex-direction: row;
   flex-wrap: wrap; */
