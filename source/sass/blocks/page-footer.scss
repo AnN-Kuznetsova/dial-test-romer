@@ -23,7 +23,7 @@
     }
 
     @include desktop-width() {
-      @include container($desktop-width, $desktop-padding, 77px, 76px);
+      @include container($desktop-width, $desktop-padding, 77px, 77px);
     }
   }
 
