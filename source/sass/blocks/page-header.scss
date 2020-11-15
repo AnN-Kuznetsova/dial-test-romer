@@ -2,6 +2,19 @@
   @include container($mobile-width, 0, 0, 0);
 
   position: relative;
+  //margin: -17px 0 0;
+}
+
+.page-header__logo-wrapper {
+  outline: 1px solid red;
+}
+
+
+/*************************************/
+/* .page-header {
+  @include container($mobile-width, 0, 0, 0);
+
+  position: relative;
   margin: -17px 0 0;
 
   @include tablet-width() {
@@ -35,3 +48,4 @@
 .page-header--nojs .page-header__nav-toggle {
   display: none;
 }
+ */

@@ -1,6 +1,25 @@
 .logo {
   display: block;
 
+  /* @include tablet-width() {
+    width: 188px;
+  } */
+}
+
+.logo__image {
+  width: 88px;
+  height: 17px;
+}
+
+.logo__intro {
+  display: none;
+}
+
+
+/***********************/
+/* .logo {
+  display: block;
+
   @include tablet-width() {
     width: 188px;
   }
@@ -35,3 +54,4 @@
     @include font-options($font-regular, 12px, 12px, $text-base-color);
   }
 }
+ */

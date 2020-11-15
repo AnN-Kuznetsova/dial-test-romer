@@ -1,4 +1,42 @@
-.ship-to {
+.ship-to__intro {
+  @include block-style();
+  @include font-options($font-regular, 12px, 12px, $text-base-color);
+}
+
+.ship-to__link {
+  @include add-interactive-text-link(".ship-to__link-text");
+
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  &:hover .ship-to__image,
+  &:focus .ship-to__image {
+    fill: $link-hover-color;
+  }
+}
+
+.ship-to__link-text {
+  @include font-options($font-regular, 12px, 12px, $text-base-color);
+
+  display: inline-block;
+  margin: 0;
+  padding: 0 5px;
+
+  text-decoration: underline;
+}
+
+.ship-to__image {
+  width: 7px;
+  height: 7px;
+
+  fill: $link-base-color;
+  pointer-events: none;
+}
+
+
+/******************************/
+/* .ship-to {
   padding: $mobile-padding $mobile-padding 15px;
 
   @include tablet-width() {
@@ -56,3 +94,4 @@
     min-height: 0;
   }
 }
+ */

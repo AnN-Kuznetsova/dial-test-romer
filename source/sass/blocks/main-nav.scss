@@ -1,6 +1,69 @@
 .main-nav {
   background-color: $bg-base-color;
 
+  outline: 1px solid red;
+}
+
+.main-nav__container {
+  @include container($mobile-width, 0, 0, 0);
+
+  outline: 1px solid blue;
+}
+
+.main-nav__list {
+  @include list-style-none();
+}
+
+.main-nav__item {
+  display: block;
+
+  @include mobile-width-only() {
+    @include decorative-line-border();
+  }
+}
+
+.main-nav__link {
+  &--active {
+    cursor: default;
+  }
+
+  &[href]:hover::before{
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: $text-base-color;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__link-text {
+  @include font-options($font-semi-bold, 14px, 17px, $text-base-color);
+
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 15px $mobile-padding;
+
+  text-transform: uppercase;
+
+  &--active {
+    color: $text-green-color;
+  }
+}
+
+
+/*********************************/
+/* .main-nav {
+  background-color: $bg-base-color;
+
   @include tablet-width() {
     background-color: $bg-light-green-color;
   }
@@ -109,3 +172,4 @@
     min-height: 0;
   }
 }
+ */
