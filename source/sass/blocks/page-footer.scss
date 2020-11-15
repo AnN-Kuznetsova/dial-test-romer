@@ -1,4 +1,4 @@
-.page-footer__wrapper {
+/* .page-footer__wrapper {
   &--top {
     background-color: $bg-light-green-color;
   }
@@ -6,9 +6,9 @@
   &--bottom {
     background-color: $bg-green-color;
   }
-}
+} */
 
-.page-footer__container {
+/* .page-footer__container {
   &--top {
     @include container($mobile-width, $mobile-padding, 40px, 40px);
 
@@ -40,15 +40,15 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-}
+} */
 
-.page-footer__nav {
+/* .page-footer__nav {
   @include desktop-width() {
     width: 85%;
   }
-}
+} */
 
-.page-footer__additionally {
+/* .page-footer__additionally {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -56,8 +56,8 @@
   @include desktop-width() {
     width: 15%;
   }
-}
+} */
 
-.page-footer__payment {
+/* .page-footer__payment {
   margin-bottom: 60px;
-}
+} */
