@@ -1,29 +1,28 @@
 .sub-nav {
   background-color: $bg-base-color;
-
-  outline: 1px solid red;
 }
 
 .sub-nav__container {
   @include container($mobile-width, 0, 0, 0);
 
   @include tablet-width() {
-    @include container($tablet-width, 0, 0, 0); //$tablet-padding, 33px, 28px);
+    @include container($tablet-width, 0, 0, 0);
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  @include desktop-width() {
+    @include container($desktop-width, $desktop-padding, 33px, 26px);
+  }
 }
 
 .sub-nav__nav-wrapper {
-  outline:  1px solid green;
-
   padding: 30px $mobile-padding;
 
   @include tablet-width() {
     width: 50%;
-    padding: 0;
   }
 
   &--contacts {
@@ -35,6 +34,12 @@
       display: block;
       padding: 33px 20% 25px $tablet-padding;
     }
+
+    @include desktop-width() {
+      width: 238px;
+      margin: -7px 25px 0 0;
+      padding: 0;
+    }
   }
 
   &--user-nav {
@@ -44,10 +49,11 @@
       padding: 33px $tablet-padding 25px 20%;
     }
 
-    /* @include desktop-width() {
+    @include desktop-width() {
       order: 1;
       width: auto;
-    } */
+      padding: 0;
+    }
   }
 
   &--ship-to {
@@ -59,9 +65,11 @@
       padding: 0 0 0 $tablet-padding;
     }
 
-    /* @include desktop-width() {
-      margin-right: auto;
-    } */
+    @include desktop-width() {
+      width: 330px;
+      margin: -10px auto 0 0;
+      padding: 0;
+    }
   }
 
   &--nav-search {
@@ -71,6 +79,18 @@
 
     @include tablet-width() {
       padding: 0 $tablet-padding 0 10%;
+    }
+
+    @include desktop-width() {
+      width: 296px;
+      margin-right: 25px;
+      padding: 0;
+    }
+  }
+
+  @include desktop-width() {
+    &::after {
+      content: none;
     }
   }
 }

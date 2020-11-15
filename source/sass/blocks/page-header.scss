@@ -8,6 +8,13 @@
     @include container($tablet-width, 0, 0, 0);
     margin-top: -50px;
   }
+
+  @include desktop-width() {
+    @include container($desktop-width, 0, 0, 0);
+
+    max-width: 100%;
+    margin-top: -58px;
+  }
 }
 
 .page-header__logo-wrapper {

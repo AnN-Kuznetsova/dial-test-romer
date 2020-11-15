@@ -12,6 +12,10 @@
   @include tablet-width() {
     @include container($tablet-width, 13%, 0, 0);
   }
+
+  @include desktop-width() {
+    @include container($desktop-width, 284px, 0, 0);
+  }
 }
 
 .main-nav__list {
@@ -21,6 +25,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  @include desktop-width() {
+    justify-content: space-between;
   }
 }
 
@@ -35,6 +43,12 @@
     width: 30%;
     min-width: 284px;
     padding: 0 100px 0 0;
+  }
+
+  @include desktop-width() {
+    width: auto;
+    min-width: 0;
+    padding: 0;
   }
 }
 
@@ -83,6 +97,10 @@
 
   @include tablet-width() {
     padding: 20px 0;
+  }
+
+  @include desktop-width() {
+    padding: 29px 0 28px 0;
   }
 }
 

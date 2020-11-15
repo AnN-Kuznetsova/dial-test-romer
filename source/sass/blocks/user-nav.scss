@@ -11,6 +11,9 @@
   @include tablet-width() {
     padding: 9px 0 0;
   }
+  @include desktop-width() {
+    padding: 0; // 0 0 25px;
+  }
 }
 
 .user-nav__item {
@@ -42,14 +45,14 @@
   @include tablet-width() {
     min-width: 40px;
     min-height: 40px;
-    padding: 10px;
+    padding: 7px;
   }
 
-  /* @include desktop-width() {
+  @include desktop-width() {
     min-width: 52px;
     height: 52px;
     padding: 10px;
-  } */
+  }
 
   &:hover .user-nav__image,
   &:focus .user-nav__image {
@@ -74,10 +77,10 @@
       height: 18px;
     }
 
-    /* @include desktop-width() {
+    @include desktop-width() {
       width: 20px;
       height: 20px;
-    } */
+    }
   }
 
   &--compare {
@@ -89,10 +92,10 @@
       height: 16px;
     }
 
-    /* @include desktop-width() {
+    @include desktop-width() {
       width: 19px;
       height: 18px;
-    } */
+    }
   }
 
   &--favorite {
@@ -104,10 +107,10 @@
       height: 19px;
     }
 
-    /* @include desktop-width() {
+    @include desktop-width() {
       width: 21px;
       height: 21px;
-    } */
+    }
   }
 
   &--shopping-bag {
@@ -119,10 +122,10 @@
       height: 18px;
     }
 
-    /* @include desktop-width() {
+    @include desktop-width() {
       width: 20px;
       height: 20px;
-    } */
+    }
   }
 }
 
