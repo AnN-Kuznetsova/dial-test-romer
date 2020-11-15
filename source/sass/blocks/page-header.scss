@@ -2,10 +2,16 @@
   @include container($mobile-width, 0, 0, 0);
 
   position: relative;
-  //margin: -17px 0 0;
+  margin: -17px 0 0;
 }
 
 .page-header__logo-wrapper {
+  position: relative;
+  top: 53px;
+  left: $mobile-padding;
+  z-index: 5;
+  width: fit-content;
+
   outline: 1px solid red;
 }
 

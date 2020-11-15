@@ -34,6 +34,13 @@
   pointer-events: none;
 }
 
+.ship-to--closed {
+  @include mobile-width-only() {
+    display: none;
+    min-height: 0;
+  }
+}
+
 
 /******************************/
 /* .ship-to {
