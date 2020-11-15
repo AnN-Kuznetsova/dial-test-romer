@@ -116,3 +116,20 @@
     transform: translateX(-50%);
   }
 }
+
+@mixin footer-title() {
+  @include font-options($font-bold, 14px, 24px, $text-base-color);
+  @include add-interactive-text-link();
+
+  display: block;
+  margin: 0;
+  padding: 0 0 15px 0;
+
+  text-transform: uppercase;
+}
+
+@mixin block-style() {
+  display: block;
+  margin: 0;
+  padding: 0;
+}

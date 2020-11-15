@@ -1,3 +1,11 @@
+.copyright {
+  @include block-style();
+  @include font-options($font-regular, 13px, 34px, $text-second-color);
+
+  outline: 1px solid red;
+}
+
+/**************************************/
 /* .copyright {
   @include font-options($font-regular, 13px, 34px, $text-second-color);
 

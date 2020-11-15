@@ -1,3 +1,59 @@
+.contacts-info {
+  outline: 1px solid green;
+}
+
+.contacts-info__intro {
+  margin: 0;
+  padding: 0;
+
+  @include font-options($font-regular, 12px, 18px, $text-grey-color);
+  text-transform: lowercase;
+}
+
+.contacts-info__tel-link {
+  @include block-style();
+  @include font-options($font-bold, 16px, 28px, $text-base-color);
+  @include add-interactive-text-link();
+
+  margin-bottom: 2px;
+}
+
+.contacts-info__email {
+  @include block-style();
+  @include font-options($font-semi-bold, 12px, 28px, $text-base-color);
+  @include add-interactive-text-link();
+
+  margin-bottom: 22px;
+}
+
+.contacts-info__email-link {
+  @include block-style();
+  @include font-options($font-regular, 12px, 18px, $text-base-color);
+  @include add-interactive-text-link();
+
+  position: relative;
+  padding-left: 21px;
+
+  text-decoration: underline;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 14px;
+    height: 14px;
+
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+
+    transform: translateY(-50%);
+  }
+}
+
+
+/****************************************/
 /* .contacts-info {
   width: 50%;
   min-width: 260px;

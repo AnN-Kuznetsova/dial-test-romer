@@ -1,3 +1,14 @@
+.privacy-policy {
+  outline: 1px solid green;
+
+  @include block-style();
+  @include font-options($font-regular, 12px, 18px, $text-base-color);
+  @include add-interactive-text-link();
+
+  text-decoration: underline;
+}
+
+/******************************/
 /* .privacy-policy {
   @include add-interactive-text-link();
   @include font-options($font-regular, 12px, 18px, $text-base-color);

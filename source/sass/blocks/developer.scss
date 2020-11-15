@@ -1,3 +1,26 @@
+.developer {
+  @include block-style();
+  @include font-options($font-regular, 13px, 34px, $text-second-color);
+
+  outline: 1px solid red;
+}
+
+.developer__link {
+  @include font-options($font-regular, 13px, 34px, $text-second-color);
+
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    font-weight: 700;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+/*****************************/
 /* .developer {
   @include font-options($font-regular, 13px, 34px, $text-second-color);
 

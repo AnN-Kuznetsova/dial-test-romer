@@ -1,3 +1,28 @@
+.payment {
+  outline: 1px solid green;
+}
+
+.payment__intro {
+  @include block-style();
+  @include font-options($font-semi-bold, 12px, 18px, $text-base-color);
+
+  margin-bottom: 16px;
+}
+
+.payment__img {
+  width: 195px;
+  height: 48px;
+
+  margin-bottom: 15px;
+}
+
+.payment__text {
+  @include block-style();
+  @include font-options($font-regular, 12px, 18px, $text-base-color);
+}
+
+
+/***************************/
 /* .payment {
   width: 50%;
   min-width: 260px;

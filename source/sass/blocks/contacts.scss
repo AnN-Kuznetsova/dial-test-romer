@@ -1,0 +1,9 @@
+.contacts {
+  outline: 1px solid red;
+}
+
+.contacts__title {
+  @include footer-title();
+
+  margin-bottom: 7px;
+}
