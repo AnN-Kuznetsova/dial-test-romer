@@ -9,10 +9,7 @@ html {
 }
 
 body {
-  //min-width: $mobile-width;
-  //width: $mobile-width;
-  //width: $tablet-width;
-  width: $desktop-width;
+  min-width: $mobile-width;
 
   @include font-options();
   font-weight: normal;
@@ -20,12 +17,10 @@ body {
   background-color: $bg-base-color;
 }
 
-/*  Ссылки  */
 a {
   text-decoration: none;
 }
 
-/*  Картинки  */
 img {
   display: block;
   max-width: 100%;
