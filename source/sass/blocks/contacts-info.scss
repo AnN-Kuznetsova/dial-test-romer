@@ -11,7 +11,7 @@
   @include font-options($font-bold, 16px, 28px, $text-base-color);
   @include add-interactive-text-link();
 
-  margin-bottom: 2px;
+  margin-bottom: 1px;
 }
 
 .contacts-info__email {
