@@ -96,6 +96,10 @@
       @include font-options($font-bold, 11px, 16px, $text-second-color);
     }
   }
+
+  &:active::after {
+    opacity: 0.3;
+  }
 }
 
 @mixin add-interactive-text-link($element: "") {

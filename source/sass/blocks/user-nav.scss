@@ -17,24 +17,6 @@
   }
 }
 
-.user-nav__item {
-  &--favorite {
-    @include contains-quantity("1");
-  }
-
-  &--shopping-bag {
-    @include contains-quantity("3");
-
-    &::after {
-      transform: translateX(1px) translateY(-100%);
-
-      @include desktop-width() {
-        transform: translateX(1px) translateY(-15px);
-      }
-    }
-  }
-}
-
 .user-nav__link {
   display: flex;
   justify-content: center;
@@ -55,13 +37,29 @@
     padding: 10px;
   }
 
+  &--favorite {
+    @include contains-quantity("1");
+  }
+
+  &--shopping-bag {
+    @include contains-quantity("3");
+
+    &::after {
+      transform: translateX(1px) translateY(-100%);
+
+      @include desktop-width() {
+        transform: translateX(1px) translateY(-15px);
+      }
+    }
+  }
+
   &:hover .user-nav__image,
   &:focus .user-nav__image {
     fill: $link-hover-color;
   }
 
   &:active .user-nav__image {
-    fill: rgba($link-hover-color, 0.3);
+    opacity: 0.3;
   }
 }
 
